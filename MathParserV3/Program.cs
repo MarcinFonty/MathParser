@@ -110,7 +110,10 @@ internal class Parser
         {
             s.Led = (left) => //TODO: Make an correct implementation for this
             {
-                return new TreeNode();
+                s.LeftOperand = left;
+                s.RightOperand = Expression(bp);
+                s.Arity = "binary";
+                return s;
             };
         }
         else
@@ -119,7 +122,21 @@ internal class Parser
         }
 
         return s;
-        throw new NotImplementedException();
+    }
+
+    public TreeNode Expression(int RightBindingPower)
+    {
+        var left = new TreeNode(); 
+        var t = currentToken;
+        Advance();
+        left = t.Nud();
+        while (RightBindingPower < currentToken.LeftBindingPower)
+        {
+            t = currentToken;
+            Advance();
+            left = t.Led(left);
+        }
+        return left;
     }
 
     /// <summary>
@@ -190,6 +207,13 @@ internal class Token : Symbol
 internal class Symbol : BaseSymbol
 {
     public int LeftBindingPower { get; set; }
+
+    // Properties to store left and right operands
+    public TreeNode LeftOperand { get; set; }
+    public TreeNode RightOperand { get; set; }
+
+    // Property to specify the arity of the symbol (e.g., "binary")
+    public string Arity { get; set; }
     public Symbol(int bp = 0)
     {
         LeftBindingPower = bp;
@@ -203,7 +227,7 @@ internal class BaseSymbol //TODO: Posibly consider making these function abstrac
         throw new Exception("Undefiened");
     };
 
-    public Func<TreeNode, TreeNode> Led { get; set; } = (left) =>
+    public Func<TreeNode, Symbol> Led { get; set; } = (left) =>
     {
         throw new Exception("Missing operator");
     };
