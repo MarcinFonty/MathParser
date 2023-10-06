@@ -7,7 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathParserV1", "MathParser\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathParserV2", "MathParserV2\MathParserV2.csproj", "{F79F1E9E-4A10-4769-96BA-23EF12F8DFFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathParserV3", "MathParserV3\MathParserV3.csproj", "{90EAC52C-EA56-4B19-8D79-FF0A0F931BEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathParserV3", "MathParserV3\MathParserV3.csproj", "{90EAC52C-EA56-4B19-8D79-FF0A0F931BEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathParserV4", "MathParserV4\MathParserV4.csproj", "{55CFB1D2-2410-45D6-B6AB-FC506BC6C8AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTPAnswer", "GTPAnswer\GTPAnswer.csproj", "{6F1A971F-80FF-4059-A0D5-FF1CA16E3087}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{90EAC52C-EA56-4B19-8D79-FF0A0F931BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90EAC52C-EA56-4B19-8D79-FF0A0F931BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90EAC52C-EA56-4B19-8D79-FF0A0F931BEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55CFB1D2-2410-45D6-B6AB-FC506BC6C8AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55CFB1D2-2410-45D6-B6AB-FC506BC6C8AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55CFB1D2-2410-45D6-B6AB-FC506BC6C8AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55CFB1D2-2410-45D6-B6AB-FC506BC6C8AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F1A971F-80FF-4059-A0D5-FF1CA16E3087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F1A971F-80FF-4059-A0D5-FF1CA16E3087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F1A971F-80FF-4059-A0D5-FF1CA16E3087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F1A971F-80FF-4059-A0D5-FF1CA16E3087}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
